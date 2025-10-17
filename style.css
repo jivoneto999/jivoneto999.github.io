@@ -1,0 +1,179 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --accent: #0077cc;
+  --nav-bg: #ffffff;
+  --footer-bg: #eeeeee;
+  --border: #ddd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== Header DO SITE (escopado!) ===== */
+.site-header {
+  background: var(--nav-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ===== Main / Sections ===== */
+main {
+  padding-top: 120px; /* altura do header fixo */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section {
+  margin: 3rem 0;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  scroll-margin-top: 120px; /* âncoras não ficam escondidas */
+}
+
+.section-title {
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin: 0 0 1rem 0;
+}
+
+/* ===== Perfil ===== */
+.perfil-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.perfil-foto {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 100px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Projetos ===== */
+.projetos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.projeto-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+/* IMPORTANTE: header de dentro do card NÃO é fixo */
+.projeto-card .projeto-header,
+.projeto-card header {
+  position: static;
+  background: transparent;
+  box-shadow: none;
+}
+
+.projeto-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 0.25rem 0;
+  display: block;
+}
+
+.projeto-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.projeto-card p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.projeto-imagens img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* ===== Botões ===== */
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+.actions .btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.25s;
+}
+.actions .btn:hover {
+  background: #005f99;
+}
+
+/* ===== Contato / Footer ===== */
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.social-links li {
+  margin: 0.5rem 0;
+}
+.social-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--footer-bg);
+  margin-top: 2rem;
+}
