@@ -10,7 +10,7 @@
     <!-- NOTE: classe adicionada -->
     <header class="site-header">
       <nav class="navbar">
-        <h1>Ivo • Engenheiro Eletricista</h1>
+        <h1 style="color: hsl(205, 100%, 40%);">Ivo • Engenheiro Eletricista</h1>
         <ul class="nav-links">
           <li><a href="#perfil">Perfil</a></li>
           <li><a href="#projetos">Projetos</a></li>
@@ -26,7 +26,10 @@
         <h2 class="section-title">Sobre Mim</h2>
         <div class="perfil-container">
           <img src="img/perfil.jpg" alt="Foto de Ivo" class="perfil-foto" />
-          <p>Olá, sou Ivo, estudante de Engenharia Elétrica na UFC.</p>
+          <p>Olá, sou <span style="color:  hsl(205, 100%, 40%); font-weight: bold;">Jose Ivo</span>, estudante de <span style="color:  hsl(205, 100%, 40%); font-weight: bold;">Engenharia Elétrica</span> na UFC. com interesse nas áreas 
+            de processamento de sinais, telecomunicações, distribuição elétrica, controle
+             e automação. É dedicado, curioso e comprometido em aprender continuamente,
+              buscando unir teoria e prática no desenvolvimento de soluções eficientes e inovadoras.</p>
         </div>
       </section>
 
@@ -35,34 +38,47 @@
         <h2 class="section-title">Projetos</h2>
         <div class="projetos-container">
           <!-- Card Projeto -->
-          <article class="projeto-card">
-            <header class="projeto-header">
-              <h3 class="projeto-titulo">Automação de Portão</h3>
-              <div class="projeto-meta">2024 • Arduino, Rele, RF 433MHz</div>
-            </header>
-            <p>
-              Projeto com Arduino para abrir portões via controle remoto.
-              Testado em laboratório com simulação no Proteus.
-            </p>
-            <div class="projeto-imagens">
-              <img
-                src="https://super.abril.com.br/wp-content/uploads/2018/07/566ee0ae82bee174ca0300dahomer-simpson.jpeg"
-                alt="Portão 1"
-              />
-              <img
-                src="https://super.abril.com.br/wp-content/uploads/2018/07/566ee0ae82bee174ca0300dahomer-simpson.jpeg"
-                alt="Portão 2"
-              />
-            </div>
+         <article class="projeto-card">
+  <header class="projeto-header">
+    <h3 class="projeto-titulo">Contador de Objetos em Esteira Industrial</h3>
+    <div class="projeto-meta">2025 • Arduino UNO, Sensor IR, Servo Motor, LED, Buzzer</div>
+  </header>
 
-            <div class="actions">
-              <a
-                href="https://github.com/ivo-eletrica/portao-arduino"
-                class="btn"
-                target="_blank"
-                >GitHub</a
-              >
-            </div>
+  <p>
+    Sistema automatizado para contagem de objetos em uma esteira industrial. 
+    O projeto utiliza sensores infravermelhos para detectar itens e servo motor para liberação controlada, 
+    com alerta visual e sonoro ao atingir o limite configurado. 
+    Desenvolvimento prático da disciplina de Instrumentação Industrial.
+  </p>
+
+  <center>
+    <div class="projeto-imagens">
+      <img src="img/esteira1.png" alt="Contador Esteira 1" />
+      <img src="img/esteira2.png" alt="Contador Esteira 2" />
+    </div>
+  </center>
+
+  <div></div>
+
+  <div class="actions">
+    <a
+      href="https://github.com/jivoneto999/esteira-industrial"
+      class="btn"
+      target="_blank"
+      >GitHub</a
+    >
+
+    <a
+      href="https://youtube.com/shorts/jOBCn4Eu34o?feature=share"
+      class="btn"
+      target="_blank"
+      >Vídeo</a
+    >
+    
+  </div>
+  
+</article>
+
 
             <!-- Fim card projeto -->
           </article>
@@ -73,9 +89,12 @@
       <section id="formacao" class="section">
         <h2 class="section-title">Formação e Cursos</h2>
         <ul>
-          <li>Engenharia Elétrica - Universidade Federal do Ceará (UFC)</li>
-          <li>Curso de Instalações Elétricas - SENAI</li>
-          <li>Curso de CLP e Automação - Plataforma XYZ</li>
+          <li>Engenharia Elétrica - Universidade Federal do Ceará (UFC): 2019 - Atual</li>
+          <li>Curso de Instalações Placas Fotovoltáicas - Deutério Cursos Técnicos: 2022</li>
+          <li>Curso de AutoCad - Udemy: 2022</li>
+          <li>Curso de Inglês - Microlins: 2018</li>
+
+
         </ul>
       </section>
 
