@@ -18,7 +18,7 @@ body {
   color: var(--text);
 }
 
-/* ===== Header DO SITE (escopado!) ===== */
+/* ====== Header ====== */
 .site-header {
   background: var(--nav-bg);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -30,12 +30,23 @@ body {
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.75rem 1rem; /* mais compacto */
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
+/* se usar <h1 class="brand"> aplica; se não, pega o h1 do header */
+.brand,
+.site-header .navbar h1 {
+  color: var(--accent);
+  font-size: clamp(1.25rem, 2.5vw + 0.5rem, 2.25rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* menu desktop */
 .nav-links {
   list-style: none;
   display: flex;
@@ -43,36 +54,56 @@ body {
   padding: 0;
   margin: 0;
 }
-
 .nav-links a {
   text-decoration: none;
   color: var(--accent);
   font-weight: 500;
 }
 
-/* ===== Main / Sections ===== */
+/* botão hamburger (some no desktop) */
+.menu-toggle {
+  display: none;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid currentColor;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  line-height: 0;
+  cursor: pointer;
+}
+.menu-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ====== Main / Sections ====== */
 main {
-  padding-top: 120px; /* altura do header fixo */
+  padding-top: 88px; /* reduz o espaço abaixo do header */
   max-width: 900px;
   margin: 0 auto;
 }
-
 .section {
-  margin: 3rem 0;
+  margin: 1.5rem 0 3rem; /* primeira seção chega mais perto do topo */
   padding: 1.5rem;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  scroll-margin-top: 120px; /* âncoras não ficam escondidas */
+  scroll-margin-top: 88px; /* âncoras não ficam escondidas */
 }
-
 .section-title {
   color: var(--accent);
   font-size: 1.6rem;
   margin: 0 0 1rem 0;
 }
 
-/* ===== Perfil ===== */
+/* ====== Perfil ====== */
+.accent {
+  color: var(--accent);
+}
+.strong {
+  font-weight: 700;
+}
+
 .perfil-container {
   display: flex;
   align-items: center;
@@ -87,7 +118,7 @@ main {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Projetos ===== */
+/* ====== Projetos ====== */
 .projetos-container {
   display: flex;
   flex-direction: column;
@@ -103,7 +134,7 @@ main {
   position: relative;
 }
 
-/* IMPORTANTE: header de dentro do card NÃO é fixo */
+/* header interno do card não é fixo */
 .projeto-card .projeto-header,
 .projeto-card header {
   position: static;
@@ -130,16 +161,28 @@ main {
   margin-bottom: 1rem;
 }
 
-.projeto-imagens img {
+/* ====== Imagens dos projetos ======
+   Centraliza o conjunto, duas lado a lado (300px cada) e empilha no mobile */
+.projeto-imagens {
   width: 100%;
-  max-width: 300px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  object-fit: cover;
+  display: flex;
+  justify-content: center; /* centraliza o grupo */
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
-/* ===== Botões ===== */
+.projeto-imagens img {
+  flex: 0 0 300px; /* cada miniatura ocupa 300px */
+  width: 300px;
+  aspect-ratio: 8 / 5; /* 16:10 padronizado */
+  object-fit: cover; /* use 'contain' se quiser sem corte */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ====== Botões ====== */
 .actions {
   display: flex;
   gap: 1rem;
@@ -157,7 +200,7 @@ main {
   background: #005f99;
 }
 
-/* ===== Contato / Footer ===== */
+/* ====== Contato / Footer ====== */
 .social-links {
   list-style: none;
   padding: 0;
@@ -176,4 +219,37 @@ footer {
   padding: 1rem;
   background: var(--footer-bg);
   margin-top: 2rem;
+}
+
+/* ====== Responsivo (mobile) ====== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.6rem 1rem;
+  }
+  .brand,
+  .site-header .navbar h1 {
+    font-size: clamp(1.25rem, 5vw + 0.25rem, 1.75rem);
+  }
+
+  /* se usar toggle: esconde menu por padrão e mostra quando abrir */
+  .menu-toggle {
+    display: inline-flex;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .navbar.is-open .nav-links {
+    display: flex;
+  }
+
+  /* miniaturas ocupam largura total no mobile (empilha) */
+  .projeto-imagens img {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+  }
 }
