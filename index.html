@@ -7,28 +7,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header fixo -->
+    <!-- NOTE: classe adicionada -->
     <header class="site-header">
       <nav class="navbar">
-        <h1 class="brand">Ivo • Engenheiro Eletricista</h1>
-
-        <button
-          class="menu-toggle"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M3 6h18M3 12h18M3 18h18"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-        </button>
-
-        <ul class="nav-links" id="primary-nav">
+        <h1 style="color: hsl(205, 100%, 40%);">Ivo • Engenheiro Eletricista</h1>
+        <ul class="nav-links">
           <li><a href="#perfil">Perfil</a></li>
           <li><a href="#projetos">Projetos</a></li>
           <li><a href="#formacao">Formação</a></li>
@@ -44,111 +27,153 @@
         <h2 class="section-title">Informações Pessoais</h2>
         <div class="perfil-container">
           <img src="img/perfil.jpg" alt="Foto de Ivo" class="perfil-foto" />
-          <p>
-            Olá, sou <span class="accent strong">Jose Ivo</span>, estudante de
-            <span class="accent strong">Engenharia Elétrica</span> na UFC, com
-            interesse nas áreas de processamento de sinais, telecomunicações,
-            distribuição elétrica, controle e automação.
-          </p>
+          <p>Olá, sou <span style="color:  hsl(205, 100%, 40%); font-weight: bold;">Jose Ivo</span>, estudante de <span style="color:  hsl(205, 100%, 40%); font-weight: bold;">Engenharia Elétrica</span> na UFC. com interesse nas áreas 
+            de processamento de sinais, telecomunicações, distribuição elétrica, controle
+             e automação.</p>
         </div>
       </section>
+    
 
       <!-- Projetos -->
       <section id="projetos" class="section">
         <h2 class="section-title">Projetos</h2>
-
         <div class="projetos-container">
-          <!-- Card: Esteira -->
-          <article class="projeto-card">
-            <header class="projeto-header">
-              <h3 class="projeto-titulo">
-                Contador de Objetos em Esteira Industrial
-              </h3>
-              <div class="projeto-meta">
-                2025 • Arduino UNO, Sensor IR, Servo Motor, LED, Buzzer
-              </div>
-            </header>
 
-            <p>
-              Sistema automatizado para contagem de objetos em esteira
-              industrial. Sensores IR detectam itens, servo realiza a liberação,
-              e há alerta visual/sonoro ao atingir o limite configurado.
-            </p>
 
-            <div class="projeto-imagens">
-              <img
-                src="img/projeto-esteira/esteira1.png"
-                alt="Diagrama de blocos da esteira"
-              />
-              <img
-                src="img/projeto-esteira/esteira2.png"
-                alt="Modelo da esteira"
-              />
-            </div>
 
-            <div class="actions">
-              <a
-                href="https://github.com/jivoneto999/esteira-industrial"
-                class="btn"
-                target="_blank"
-                >GitHub</a
-              >
-              <a
-                href="https://youtube.com/shorts/jOBCn4Eu34o?feature=share"
-                class="btn"
-                target="_blank"
-                >Vídeo</a
-              >
-            </div>
-          </article>
+        
+          <!-- Card Projeto -->
 
-          <!-- Card: Planta residencial -->
-          <article class="projeto-card">
-            <header class="projeto-header">
-              <h3 class="projeto-titulo">
-                Projeto de Instalação Elétrica Residencial
-              </h3>
-              <div class="projeto-meta">
-                2025 • Planta elétrica, AutoCAD, NBR 5410, QD, DPS, DR
-              </div>
-            </header>
+          <!-- Card Projeto da Esteira Industrial -->
 
-            <p>
-              Desenvolvimento completo de planta elétrica residencial:
-              dimensionamento de iluminação, tomadas e chuveiro; distribuição de
-              cargas, diagrama unifilar e especificação de condutores,
-              disjuntores, DPS e DR conforme NBR 5410.
-            </p>
+         <article class="projeto-card">
+  <header class="projeto-header">
+    <h3 class="projeto-titulo">Contador de Objetos em Esteira Industrial</h3>
+    <div class="projeto-meta">2025 • Arduino UNO, Sensor IR, Servo Motor, LED, Buzzer</div>
+  </header>
 
-            <div class="projeto-imagens">
-              <img
-                src="img/projeto-planta/imagem-planta1.png"
-                alt="Planta baixa"
-              />
-              <img
-                src="img/projeto-planta/imagem-planta2.png"
-                alt="Diagrama unifilar"
-              />
-            </div>
-            <div class="projeto-imagens">
-              <img
-                src="img/projeto-planta/imagem-planta3.png"
-                alt="Detalhes e especificações 1"
-              />
-              <img
-                src="img/projeto-planta/imagem-planta4.png"
-                alt="Detalhes e especificações 2"
-              />
-            </div>
+  <p>
+    Sistema automatizado para contagem de objetos em uma esteira industrial. 
+    O projeto utiliza sensores infravermelhos para detectar itens e servo motor para liberação controlada, 
+    com alerta visual e sonoro ao atingir o limite configurado. 
+    Desenvolvimento prático da disciplina de Instrumentação Industrial.
+  </p>
 
-            <div class="actions">
-              <a
-                href="https://github.com/jivoneto999/projeto-planta-instrumenta-o"
-                class="btn"
-                target="_blank"
-                >GitHub</a
-              >
-            </div>
+  <center>
+    <div class="projeto-imagens">
+      <img src="img/projeto-esteira/esteira1.png" alt="Diagrama de Blocos" />
+      <img src="img//projeto-esteira/esteira2.png" alt="Esteira , Modelo" />
+    </div>
+  </center>
+
+  <div></div>
+
+  <div class="actions">
+    
+    <a
+      href="https://github.com/jivoneto999/esteira-industrial"
+      class="btn"
+      target="_blank"
+      >GitHub</a
+    >
+
+    <a
+      href="https://youtube.com/shorts/jOBCn4Eu34o?feature=share"
+      class="btn"
+      target="_blank"
+      >Vídeo</a
+    >
+    
+  </div>
+  
+</article>
+
+<!-- Card Projeto Instrumentação Planta da casa-->
+
+<article class="projeto-card">
+  <header class="projeto-header">
+    <h3 class="projeto-titulo">Projeto de Instalação Elétrica Residencial</h3>
+    <div class="projeto-meta">2025 • Planta elétrica residencial, AutoCAD, NBR 5410, QD, DPS, DR, Disjuntores
+</div>
+  </header>
+
+  <p>
+Este projeto apresenta o desenvolvimento completo de uma <span style="font-style: italic;">planta elétrica residencial</span>, elaborado na disciplina Instrumentação, Medidas e Instalações Elétricas.
+O trabalho contempla o dimensionamento de circuitos de iluminação, tomadas e chuveiros elétricos, bem como a distribuição equilibrada de cargas entre fases e o diagrama unifilar do sistema.
+Foram aplicadas normas da NBR 5410, com detalhamento dos condutores, disjuntores, DPS e DR, além da definição do quadro de distribuição (QD) e pontos elétricos em planta baixa.
+O projeto enfatiza segurança, eficiência energética e organização técnica das instalações, representando uma base sólida para projetos reais de baixa tensão.
+  </p>
+
+  <center>
+    <div class="projeto-imagens">
+      <img src="img/projeto-planta/imagem-planta1.png" alt="Planta Baixa" />
+      <img src="img/projeto-planta/imagem-planta2.png" alt="Diagrama unifilar" />
+    </div>
+    <div class="projeto-imagens">
+      <img src="img/projeto-planta/imagem-planta3.png" alt="Especificações" />
+      <img src="img/projeto-planta/imagem-planta4.png" alt="Especificações" />
+    </div>
+  </center>
+
+  <div></div>
+
+  <div class="actions">
+    <a
+      href="https://github.com/jivoneto999/projeto-planta-instrumenta-o"
+      class="btn"
+      target="_blank"
+      >GitHub</a
+    >
+
+    
+  </div>
+  
+</article>
+
+<!-- Card Projeto Microprocessadores-->
+
+<article class="projeto-card">
+  <header class="projeto-header">
+    <h3 class="projeto-titulo">Voltímetro Digital com Microcontrolador PIC</h3>
+    <div class="projeto-meta">2024 • Linguagem C, PIC16F, Proteus, LCD 16x2
+</div>
+  </header>
+
+  <p>
+Desenvolvimento de um voltímetro digital utilizando um microcontrolador PIC programado em linguagem C. O sistema realiza a leitura de dois canais analógicos (RA0 e RA1) por meio do conversor A/D interno, convertendo os valores em tensão e exibindo-os em um display LCD 16x2. O código inclui funções específicas para controle do LCD, configuração do ADC e formatação da saída via printf(). A simulação foi executada no Proteus, demonstrando medições precisas e atualização em tempo real das tensões. O projeto reforça conceitos de eletrônica embarcada, programação em C e integração entre hardware e software.
+  </p>
+
+  <center>
+    <div class="projeto-imagens">
+      <img src="img/projeto-micros/micros1.png" alt="projeto micros foto 1" />
+      <img src="img/projeto-micros/micros2.png" alt="projeto micros foto 2" />
+    </div>
+    
+  </center>
+
+  <div></div>
+
+  <div class="actions">
+    <a
+      href="https://github.com/jivoneto999/Projeto-Micros"
+      class="btn"
+      target="_blank"
+      >GitHub</a
+    >
+
+    
+  </div>
+  
+</article>
+
+
+
+            <!-- Fim card projeto -->
+
+
+
+
+
           </article>
         </div>
       </section>
@@ -157,22 +182,19 @@
       <section id="formacao" class="section">
         <h2 class="section-title">Formação e Cursos</h2>
         <ul>
-          <li>
-            Engenharia Elétrica - Universidade Federal do Ceará (UFC): 2019 -
-            Atual
-          </li>
-          <li>Instalações Fotovoltaicas - Deutério Cursos Técnicos: 2022</li>
-          <li>AutoCAD - Udemy: 2022</li>
-          <li>Inglês - Microlins: 2018</li>
+          <li>Engenharia Elétrica - Universidade Federal do Ceará (UFC): 2019 - Atual</li>
+          <li>Curso de Instalações Placas Fotovoltáicas - Deutério Cursos Técnicos: 2022</li>
+          <li>Curso de AutoCad - Udemy: 2022</li>
+          <li>Curso de Inglês - Microlins: 2018</li>
         </ul>
       </section>
 
-      <!-- Experiência -->
+      <!--Experiencia Profissional-->
       <section id="experiencia" class="section">
         <h2 class="section-title">Experiências Profissionais</h2>
         <ul>
-          <li>EMS Contadores — Estagiário: 2025</li>
-          <li>Instalações Residenciais e Industriais — Estagiário: 2025</li>
+          <li>EMS contadores - Estagiário: 2025</li>
+          <li>Empresa de Instalações Residenciais e Industriais Eletrotec Sobral (João Batista Souza) - Estagiário: 2025</li>
         </ul>
       </section>
 
@@ -182,7 +204,7 @@
         <ul class="social-links">
           <li>
             <a
-              href="https://www.linkedin.com/in/jos%C3%A9-ivo-4213a12a9"
+              href="https://www.linkedin.com/in/jos%C3%A9-ivo-4213a12a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
               >Meu LinkedIn</a
             >
@@ -193,12 +215,16 @@
             >
           </li>
           <li>
-            <a href="https://www.instagram.com/eng_jiv/" target="_blank"
+            <a
+              href="https://www.instagram.com/eng_jiv/?igsh=NmVoODFxNDJvcDIw#"
+              target="_blank"
               >Meu Instagram</a
             >
           </li>
           <li>
-            <a href="https://www.facebook.com/ivojneto98" target="_blank"
+            <a
+              href="https://www.facebook.com/ivojneto98?rdid=fjDcZqJoz60nOmcn&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CtFdvwUqa%2F#"
+              target="_blank"
               >Meu Facebook</a
             >
           </li>
@@ -213,7 +239,5 @@
     <footer>
       <p>© 2025 Ivo. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
