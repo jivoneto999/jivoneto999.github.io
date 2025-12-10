@@ -12,6 +12,22 @@ p {
   text-justify: inter-word;
 }
 
+.card-titulo {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-justify: initial;
+  font-size: initial;
+  font-weight: initial;
+  line-height: initial;
+  color: inherit; /* mantém a cor do contexto */
+  text-decoration: none;
+
+  color: hsl(205, 100%, 40%);
+  font-weight: bold;
+  font-size: large;
+}
+
 footer p {
   text-align: center;
 }
