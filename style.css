@@ -20,10 +20,10 @@ p {
   font-size: initial;
   font-weight: initial;
   line-height: initial;
-  color: inherit; /* mantém a cor do contexto */
+  color: inherit;
   text-decoration: none;
-
-  color: hsl(205, 100%, 40%);
+  /*color: hsl(205, 100%, 40%);*/
+  color: var(--accent);
   font-weight: bold;
   font-size: large;
 }
@@ -55,7 +55,7 @@ body {
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.75rem 1rem; /* mais compacto */
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -110,7 +110,9 @@ main {
 .section {
   margin: 1.5rem 0 3rem; /* primeira seção chega mais perto do topo */
   padding: 1.5rem;
-  background: #fff;
+  /* background: #fff;*/
+  background: var(--surface);
+
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   scroll-margin-top: 88px; /* âncoras não ficam escondidas */
@@ -151,7 +153,9 @@ main {
 }
 
 .projeto-card {
-  background: #fff;
+  /* background: #fff; */
+  background: var(--surface);
+
   border-radius: 8px;
   padding: 2rem;
   border: 1px solid var(--border);
@@ -177,7 +181,9 @@ main {
 
 .projeto-meta {
   font-size: 0.9rem;
-  color: #777;
+  /*color: #777;*/
+  color: var(--muted);
+
   margin-bottom: 1rem;
 }
 
@@ -204,7 +210,8 @@ main {
   aspect-ratio: 8 / 5; /* 16:10 padronizado */
   object-fit: cover; /* use 'contain' se quiser sem corte */
   border-radius: 6px;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
+  border: 1px solid var(--img-border);
 }
 
 /* ====== Botões ====== */
